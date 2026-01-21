@@ -86,7 +86,11 @@
     },
     "Centered Math": {
         "prefix": ["mathcentered", "\\mathcentered"],
-        "body": ["\\$$ $0 \\$$"],
+        "body": [
+            "\\[",
+            "\t$0",
+            "\\]"
+        ],
         "description": "Insert centered Math Environment."
     },
     "Section": {
