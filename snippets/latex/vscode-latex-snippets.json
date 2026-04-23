@@ -11,6 +11,7 @@
       "\\usepackage{amsmath,amsfonts,amsbsy,amssymb}",
       "\\usepackage{booktabs}",
       "\\usepackage{siunitx}",
+      "\\usepackage{enumitem}",
       "\\setlist[enumerate]{",
       "  nosep,",
       "  wide,",
@@ -43,15 +44,17 @@
   },
   "Inline Math": {
     "prefix": ["mathinline", "\\mathinline"],
-    "body": ["\\( $1 \\)$0"],
+    "body": [" \\( $1 \\) $0"],
     "description": "Insert inline Math Environment."
   },
   "Centered Math": {
     "prefix": ["mathcentered", "\\mathcentered"],
     "body": [
+      "",
       "\\[",
-      "  $0${1:.}",
-      "\\]"
+      "  ${1:.}",
+      "\\]",
+      "$0"
     ],
     "description": "Insert centered Math Environment."
   },
