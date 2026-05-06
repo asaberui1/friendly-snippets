@@ -33,22 +33,22 @@
     "description": "Use the default template which includes a variety of packages and declared-commands. The template will also automatically generate the title and author, as well as date, and will formate the document."
   },
   "Large Summation": {
-    "prefix": ["sumlarge", "\\sumlarge"],
-    "body": ["\\displaystyle\\sum_{$1}^{$2} $3 ${4:,}"],
+    "prefix": ["suml", "\\suml"],
+    "body": ["\\displaystyle\\sum_{$1}^{$2} $3 ${4:,}$0"],
     "description": "Insert a large summation notation."
   },
   "Inline Summation": {
-    "prefix": ["suminline", "\\suminline"],
-    "body": ["\\sum_{$1}^{$2} $3"],
+    "prefix": ["sumi", "\\sumi"],
+    "body": ["\\sum_{$1}^{$2} $3$0"],
     "description": "Insert an inline summation notation, (only in the cases when the environment is inline math environment)."
   },
   "Inline Math": {
-    "prefix": ["mathinline", "\\mathinline"],
-    "body": [" \\( $1 \\) $0"],
+    "prefix": ["mathi", "\\mathi"],
+    "body": ["$${1}$$0"],
     "description": "Insert inline Math Environment."
   },
   "Centered Math": {
-    "prefix": ["mathcentered", "\\mathcentered"],
+    "prefix": ["mathc", "\\mathc"],
     "body": [
       "",
       "\\[",
@@ -148,29 +148,29 @@
     "description": "Insert a proof, whose style is already defined in the template. The serial number is automatically generated according to the section."
   },
   "Large Integral": {
-    "prefix": ["integrallarge", "\\integrallarge"],
-    "body": ["\\displaystyle\\int_{$1}^{$2} $3 \\, \\mathrm{d}{$4} ${5:,}"],
+    "prefix": ["intl", "\\intl"],
+    "body": ["\\displaystyle\\int_{$1}^{$2} $3 \\, \\mathrm{d}{$4} ${5:,}$0"],
     "description": "Insert large integral notation."
   },
   "Inline Integral": {
-    "prefix": ["integralinline", "\\integralinline"],
-    "body": ["\\int_{$1}^{$2} $3 \\, \\mathrm{d}{$4}"],
+    "prefix": ["inti", "\\inti"],
+    "body": ["\\int_{$1}^{$2} $3 \\, \\mathrm{d}{$4}$0"],
     "description": "Insert inline integral notation, (only in the cases when the environment is inline math environment)."
   },
   "Inline Fraction": {
-    "prefix": ["fractioninline", "\\fractioninline"],
+    "prefix": ["fraci", "\\fraci"],
     "body": ["\\frac{$1}{$2}$0"],
     "description": [
       "Insert inline fraction notation, (only in the cases when the environment is inline math environment)."
     ]
   },
   "Large Fraction": {
-    "prefix": ["fractionlarge", "\\fractionlarge"],
+    "prefix": ["fracl", "\\fracl"],
     "body": ["\\displaystyle\\frac{$1}{$2}$0"],
     "description": ["Insert large fraction notation"]
   },
   "Create 2D Plot environment": {
-    "prefix": ["plotenvironment2d", "\\plotenvironment2d"],
+    "prefix": ["plotenv2d", "\\plotenv2d"],
     "body": [
       "\\begin{tikzpicture}",
       "  \\begin{axis}[",
@@ -189,7 +189,7 @@
     "description": "Create a 2DPlot Environment of pgfplots. The style declarations are already included in the snippet."
   },
   "Plot 2D Graph": {
-    "prefix": ["plotgraph2d", "\\plotgraph2d"],
+    "prefix": ["pltg2d", "\\pltg2d"],
     "body": [
       "\\addplot [",
       "  domain=${1:-10}:${2:10},",
@@ -203,7 +203,7 @@
     "description": "Plot a 2D Graph in the 2D graph environment, noted that this can also be used in the 3D environment."
   },
   "Plot Circle 2D": {
-    "prefix": ["plotcircle2d", "\\plotcircle2d"],
+    "prefix": ["pltcir2d", "\\pltcir2d"],
     "body": [
       "\\addplot [",
       "  domain=0:2*3.14159265,",
@@ -216,7 +216,7 @@
     "description": "Plot a 2D Circle in the 2D graph environment, noted that this can also be used in the 3D environment."
   },
   "Plot Line 2D": {
-    "prefix": ["plotline2d", "\\plotline2d"],
+    "prefix": ["pltln2d", "\\pltln2d"],
     "body": [
       "\\addplot [",
       "  domain=${4:x1}:${5:x2},",
@@ -229,7 +229,7 @@
     "description": "Plot a 2D Line in the 2D graph environment, noted that this can also be used in the 3D environment."
   },
   "Plot Ellipse 2D": {
-    "prefix": ["plotellipse2d", "\\plotellipse2d"],
+    "prefix": ["pltell2d", "\\pltell2d"],
     "body": [
       "\\addplot [",
       "  domain=0:2*3.14159265,",
@@ -242,10 +242,7 @@
     "description": "Plot a 2D Ellipse in the 2D graph environment, noted that this can also be used in the 3D environment."
   },
   "Plot Quadratic Function 2D by Point": {
-    "prefix": [
-      "plotquadraticfunction2dbypoint",
-      "\\plotquadraticfunction2dbypoint"
-    ],
+    "prefix": ["pltquad2d", "\\pltquad2d"],
     "body": [
       "\\addplot [",
       "  domain=${4:x1}:${5:x2},",
@@ -258,7 +255,7 @@
     "description": "Plot a 2D graph of a quadratic function in the 2D graph environment by the given extrema, noted that this can also be used in the 3D environment."
   },
   "Plot Smooth Curve By Point Set": {
-    "prefix": ["plotsmoothcurvebypointset", "\\plotsmoothcurvebypointset"],
+    "prefix": ["pltsmooth", "\\pltsmooth"],
     "body": [
       "\\addplot+[smooth]",
       "coordinates",
@@ -269,7 +266,7 @@
     "description": "Plot a Smooth Curve by point set (2D)."
   },
   "Create 3D Plot Environment": {
-    "prefix": ["plotenvironment3d", "\\plotenvironment3d"],
+    "prefix": ["plotenv3d", "\\plotenv3d"],
     "body": [
       "\\begin{tikzpicture}",
       "  \\begin{axis}[",
@@ -290,7 +287,7 @@
     "description": "Create a 3DPlot Environment of pgfplots. The style declarations are already included in the snippet."
   },
   "Plot 3D Graph": {
-    "prefix": ["plotgraph3d", "\\plotgraph3d"],
+    "prefix": ["pltg3d", "\\pltg3d"],
     "body": [
       "\\addplot3[",
       "  ${1|surf,mesh|},",
@@ -302,7 +299,7 @@
     "description": "Plot a 3D Graph in the 3D graph environment created."
   },
   "Create Align* Environment in Text": {
-    "prefix": ["aligntext", "\\aligntext"],
+    "prefix": ["align", "\\align"],
     "body": [
       "\\begin{align*}",
       "  $1${2:.}",
@@ -311,7 +308,7 @@
     "description": "Create an align environment when the context is in the text environment."
   },
   "Insert Problem Solving Index": {
-    "prefix": ["problemindex", "\\problemindex"],
+    "prefix": ["pindex", "\\pindex"],
     "body": ["\\noindent\\boldsymbol{$1} $0"],
     "description": "Insert problem solving index format."
   },
